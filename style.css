@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    transition:  all 0.5s ease;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient( to top right, rgb(149, 149, 151),rgb(255, 253, 255));
+
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+}
+.cal {
+    position: relative;
+    height: auto;
+    width: auto;
+    border-radius: 20px;
+    background-color: #22252d;
+    border: 2px solid #bdb6b6;
+    box-shadow: 0 2 0 4 rgba(216, 195, 195, 0.8);
+}
+
+.input-box >.input {
+     width: 100%;
+     height: 240px;
+     border-radius: 20px;
+     border:  none;
+     color: #fff;
+      display: flex;
+      padding: 10px;
+      text-align: right;
+      align-items: flex-end;
+     justify-content: end;
+     background-color: #22252d;
+    
+}
+.btn-panel {
+        background-color: #2a2d37;
+        border-radius: 20px;
+        padding: 10px 0;
+        height: 100%;
+        width: 100%;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    gap: 15px;
+}
+
+.theme-toggler {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.theme-toggler.active {
+    color: #333;
+}
+
+.theme-toggler.active::before {
+    background-color: #333;
+}
+.theme-toggler::before {
+    content: '';
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform:  translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: -1;
+}
+
+#display {
+    margin: 0px 10px;
+    height: 150px;
+    width: auto;
+    max-width: 270px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    margin-bottom: 20px;
+    overflow-x: scroll;
+}
+
+#display::-webkit-scrollbar {
+    display: block;
+    height: 3px;
+}
+
+.btn {
+    width: 50px;
+    padding: 10px;
+    background-color: #3d3f44;
+    border: none;
+    color: white;
+    border: 1px solid #303131;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 20px;
+}
+.btn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+ #clear {
+    color: #39e6d1;
+ }
+
+ #remove {
+    color: #39e6d1;
+ }
+
+.btn-opretor {
+    color:#e17676
+}
+.btn-equal {
+    color: #e17676;
+    width: 120px;
+}
+
+.cal.light{
+    background-color: #ffffff;
+    border: 2px solid #292828;
+    box-shadow: 0 2 0 4 rgba(34, 34, 34, 0.8);
+}
+
+.cal.light .input-box>.input {
+     color: black;
+     border:  none;
+     text-align: right;
+     justify-content: end;
+     background-color: #ffffff;
+       display: flex;
+      padding: 10px;
+      align-items: flex-end;
+     justify-content: end;
+    
+}
+
+
+.cal.light .btn-panel{
+        background-color: #f9f9f9;
+
+}
+
+.cal.light .btn {    
+    background-color: #f7f7f7;
+    border: 1px solid #e1dada;
+}
+
+.cal.light .btn-num {
+    color: #333;
+}
+
+.input.error-message {
+    color: #e23434;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.cal.light .input.error-message {
+    color: #e23434;
+    font-weight: 700;
+    font-size: 25px;
+}
